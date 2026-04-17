@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Drone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🚁 SkyTrack Logistics</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="cadastro.html">Cadastrar Drone</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <form action="#" method="post">
+        <h2>Cadastro de Drone</h2>
+
+        <label for="nome">Nome do Drone</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Drone Alpha" required>
+
+        <label for="serie">Número de Série</label>
+        <input type="text" id="serie" name="serie" minlength="8" required>
+
+        <label for="setor">Setor</label>
+        <select id="setor" name="setor">
+            <option>Entrega Rápida</option>
+            <option>Pesada</option>
+            <option>Inspeção</option>
+        </select>
+
+        <p><strong>Estado do Drone:</strong></p>
+        
+        <div class="radio-group">
+            <input type="radio" id="ativo" name="status" value="ativo">
+            <label for="ativo">Ativo</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="manutencao" name="status" value="manutencao">
+            <label for="manutencao">Em Manutenção</label>
+        </div>
+
+        <label for="senha">Senha do Operador:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit">Cadastrar Drone</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 SkyTrack Logistics</p>
+    <address>suporte@skytrack.com</address>
+</footer>
+
+<button class="sos">SOS</button>
+
+</body>
+</html>
