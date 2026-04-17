@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("../img/imagem_fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    color: white; /* Cor padrão para textos sobre o fundo escuro */
+}
+
+/* --- HEADER --- */
+header {
+    background: rgba(17, 17, 17, 0.9);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- MAIN & SECTIONS --- */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* --- TABELA (DASHBOARD) --- */
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- ESTILO DOS STATUS NA TABELA --- */
+
+/* Base para os "badges" de status */
+.status-online, .status-manutencao {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    display: inline-block; /* Garante que o fundo não ocupe a célula toda */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Gradiente de Preto para Verde (Online) */
+.status-online {
+    background: linear-gradient(135deg, #000000 0%, #2ecc71 100%);
+    border: 1px solid #27ae60;
+}
+
+/* Gradiente de Preto para Amarelo (Manutenção) */
+.status-manutencao {
+    background: linear-gradient(135deg, #000000 0%, #f1c40f 100%);
+    border: 1px solid #f39c12;
+    color: #fff; /* Mantém branco para ler bem sobre o gradiente escuro */
+}
+
+/* Ajuste na célula da tabela para centralizar o badge */
+td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* --- CARDS DE ALERTAS (DASHBOARD) --- */
+.alertas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #ff4444;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- FORMULÁRIO (CADASTRO) --- */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para alinhar rádio e label perfeitamente um embaixo do outro */
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- FOOTER & SOS --- */
+footer {
+    text-align: center;
+    background-color: black;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sos {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 10px; }
+}
